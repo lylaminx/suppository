@@ -1,0 +1,10 @@
+services:
+  {{PACKAGE_NAME}}:
+    container_name: {{PACKAGE_NAME}}
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
