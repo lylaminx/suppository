@@ -1,0 +1,35 @@
+{
+  "name": "{{PACKAGE_NAME}}",
+  "description": "{{DESCRIPTION}}",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+  }
+  "dependencies": {
+    "@prisma/client": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "eslint": "latest",
+    "prettier": "latest",
+    "vitest": "latest",
+    "@playwright/test": "latest",
+    "prisma": "latest"
+  }
+}
